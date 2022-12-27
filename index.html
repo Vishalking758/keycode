@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        height: 96vh;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h1 {
+        padding: 20px;height: 70px;
+    }
+
+</style>
+
+<body>
+    <h1>Press Key</h1>
+    <h1 id="number"></h1>
+    <h1 id="text"></h1>
+</body>
+<script>
+    let number = document.getElementById("number");
+    let text = document.getElementById("text");
+    addEventListener("keydown", (code) => {
+        number.innerHTML = code.keyCode;
+        text.innerHTML = code.key;
+    })
+</script>
+
+</html>
